@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>HumanBytes</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>HumanBytes</title>
     <authors>Thomas Levesque</authors>
     <owners>Thomas Levesque</owners>
@@ -16,5 +16,6 @@
   <files>
     <file src="..\HumanBytes\bin\Release\HumanBytes.dll" target="lib" />
     <file src="..\HumanBytes\bin\Release\HumanBytes.xml" target="lib" />
+    <file src="..\HumanBytes\bin\Release\fr\HumanBytes.resources.dll" target="lib\fr" />
   </files>
 </package>
