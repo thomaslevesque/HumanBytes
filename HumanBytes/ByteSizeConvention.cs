@@ -11,12 +11,12 @@
         Customary,
         /// <summary>
         /// Binary convention : binary multiples (1024), binary prefixes (Ki/Mi/Gi...).
-        /// Equivalent à IEC.
+        /// Same as IEC.
         /// </summary>
         Binary,
         /// <summary>
         /// Decimal convention : decimal multiples (1000), decimal prefixes (K/M/G...).
-        /// Equivalent à SI.
+        /// Same as SI.
         /// </summary>
         Decimal,
         /// <summary>
