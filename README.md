@@ -8,7 +8,9 @@ Installation
 
 Install the library via NuGet
 
-``````
+```
+PM> Install-Package HumanBytes
+```
 
 Basic usage
 -----------
