@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
-using HumanBytes.Properties;
+using System.Reflection;
+using System.Resources;
 
 namespace HumanBytes
 {
@@ -9,6 +10,10 @@ namespace HumanBytes
     /// </summary>
     public class ByteSizeFormatter
     {
+
+        private static readonly ResourceManager ResourceManager = 
+            new ResourceManager("HumanBytes.Properties.Resources", typeof(ByteSizeFormatter).GetTypeInfo().Assembly);
+
         #region Prefixes and multiples definitions
 
         private static readonly long[] _decimalMultiples =
@@ -227,12 +232,12 @@ namespace HumanBytes
                 k = i;
             }
 
-            string byteText = Resources.ResourceManager.GetString("ByteSymbol", Culture);
+            string byteText = ResourceManager.GetString("ByteSymbol", Culture);
             if (UseFullWordForBytes && k == 0)
             {
                 byteText = size > 1
-                            ? Resources.ResourceManager.GetString("BytesWord", Culture)
-                            : Resources.ResourceManager.GetString("ByteWord", Culture);
+                            ? ResourceManager.GetString("BytesWord", Culture)
+                            : ResourceManager.GetString("ByteWord", Culture);
             }
             decimal valueToDisplay = Round((decimal)size / multiples[k]);
 
