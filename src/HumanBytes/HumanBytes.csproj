@@ -1,8 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0;netstandard2.0</TargetFrameworks>
+    <NeutralLanguage>en</NeutralLanguage>
     <Description>A library to convert byte sizes to a human readable form.</Description>
     <Authors>Thomas Levesque</Authors>
-    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseUrl>https://github.com/thomaslevesque/HumanBytes/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/thomaslevesque/HumanBytes</PackageProjectUrl>
+    <PackageTags>byte,size,human</PackageTags>
   </PropertyGroup>
 </Project>
