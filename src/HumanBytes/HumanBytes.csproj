@@ -2,6 +2,8 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0;netstandard2.0</TargetFrameworks>
     <NeutralLanguage>en</NeutralLanguage>
+    <AssemblyOriginatorKeyFile>HumanBytes.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
     <Description>A library to convert byte sizes to a human readable form.</Description>
     <Authors>Thomas Levesque</Authors>
     <PackageLicenseUrl>https://github.com/thomaslevesque/HumanBytes/blob/master/LICENSE.md</PackageLicenseUrl>
