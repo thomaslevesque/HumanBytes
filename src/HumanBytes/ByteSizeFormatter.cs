@@ -183,13 +183,31 @@ namespace HumanBytes
             }
         }
 
-        ///<summary>
+        /// <summary>
         /// Gets or sets a value indicating whether sizes under 1KB/1KiB are formatted using
         /// the full unabbreviated "byte" word.
-        ///</summary>
+        /// </summary>
         /// <value>true to use the unabbreviated word "byte" for sizes under 1KB/1KiB,
         /// false to use the abbreviation. The default value is true.</value>
         public bool UseFullWordForBytes { get; set; }
+
+        /// <summary>
+        /// The symbol to use for a byte (e.g. "B" in English). If unspecified, the symbol defined in resources is used.
+        /// </summary>
+        /// <value>The symbol to use for a byte.</value>
+        public string ByteSymbol { get; set; }
+
+        /// <summary>
+        /// The word to use for a byte (e.g. "byte" in English). If unspecified, the word defined in resources is used.
+        /// </summary>
+        /// <value>The word to use for a byte.</value>
+        public string ByteWord { get; set; }
+
+        /// <summary>
+        /// The word to use for several bytes (e.g. "bytes" in English). If unspecified, the word defined in resources is used.
+        /// </summary>
+        /// <value>The word to use for several bytes.</value>
+        public string BytesWord { get; set; }
 
         #endregion
 
@@ -209,12 +227,12 @@ namespace HumanBytes
             switch (Convention)
             {
                 case ByteSizeConvention.Binary:
-                    //case ByteSizeConvention.IEC:
+                //case ByteSizeConvention.IEC:
                     multiples = _binaryMultiples;
                     prefixes = _binaryPrefixes;
                     break;
                 case ByteSizeConvention.Decimal:
-                    //case ByteSizeConvention.SI:
+                //case ByteSizeConvention.SI:
                     multiples = _decimalMultiples;
                     prefixes = _decimalPrefixes;
                     break;
@@ -232,13 +250,14 @@ namespace HumanBytes
                 k = i;
             }
 
-            string byteText = ResourceManager.GetString("ByteSymbol", Culture);
+            string byteText = ByteSymbol ?? ResourceManager.GetString(nameof(ByteSymbol), Culture);
             if (UseFullWordForBytes && k == 0)
             {
                 byteText = size > 1
-                            ? ResourceManager.GetString("BytesWord", Culture)
-                            : ResourceManager.GetString("ByteWord", Culture);
+                            ? BytesWord ?? ResourceManager.GetString(nameof(BytesWord), Culture)
+                            : ByteWord ?? ResourceManager.GetString(nameof(ByteWord), Culture);
             }
+
             decimal valueToDisplay = Round((decimal)size / multiples[k]);
 
             return string.Format(
