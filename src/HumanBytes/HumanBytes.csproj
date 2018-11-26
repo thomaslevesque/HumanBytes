@@ -1,9 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0;netstandard2.0</TargetFrameworks>
     <NeutralLanguage>en</NeutralLanguage>
     <AssemblyOriginatorKeyFile>HumanBytes.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\HumanBytes.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <Description>A library to convert byte sizes to a human readable form.</Description>
     <Authors>Thomas Levesque</Authors>
     <PackageLicenseUrl>https://github.com/thomaslevesque/HumanBytes/blob/master/LICENSE.md</PackageLicenseUrl>
@@ -16,4 +21,5 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All"/>
   </ItemGroup>
+
 </Project>
