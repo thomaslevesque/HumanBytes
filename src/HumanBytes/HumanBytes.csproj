@@ -8,6 +8,7 @@
     <PackageProjectUrl>https://github.com/thomaslevesque/HumanBytes</PackageProjectUrl>
     <PackageTags>byte,size,human</PackageTags>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
