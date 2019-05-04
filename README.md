@@ -1,8 +1,8 @@
 # HumanBytes
 
-[![NuGet version](https://img.shields.io/nuget/v/HumanBytes.svg)](https://www.nuget.org/packages/HumanBytes)
-[![AppVeyor build](https://img.shields.io/appveyor/ci/thomaslevesque/humanbytes.svg)](https://ci.appveyor.com/project/thomaslevesque/humanbytes)
-[![AppVeyor tests](https://img.shields.io/appveyor/tests/thomaslevesque/humanbytes.svg)](https://ci.appveyor.com/project/thomaslevesque/humanbytes/build/tests)
+[![NuGet version](https://img.shields.io/nuget/v/HumanBytes.svg?logo=nuget)](https://www.nuget.org/packages/HumanBytes)
+[![AppVeyor build](https://img.shields.io/appveyor/ci/thomaslevesque/humanbytes.svg?logo=appveyor)](https://ci.appveyor.com/project/thomaslevesque/humanbytes)
+[![AppVeyor tests](https://img.shields.io/appveyor/tests/thomaslevesque/humanbytes.svg?logo=appveyor)](https://ci.appveyor.com/project/thomaslevesque/humanbytes/build/tests)
 
 A library to convert byte sizes to a human readable form.
 
