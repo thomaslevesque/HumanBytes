@@ -1,10 +1,12 @@
-HumanBytes
-==========
+# HumanBytes
+
+[![NuGet version](https://img.shields.io/nuget/v/HumanBytes.svg)](https://www.nuget.org/packages/HumanBytes)
+[![AppVeyor build](https://img.shields.io/appveyor/ci/thomaslevesque/humanbytes.svg)](https://ci.appveyor.com/project/thomaslevesque/humanbytes)
+[![AppVeyor tests](https://img.shields.io/appveyor/tests/thomaslevesque/humanbytes.svg)](https://ci.appveyor.com/project/thomaslevesque/humanbytes/build/tests)
 
 A library to convert byte sizes to a human readable form.
 
-Installation
-------------
+## Installation
 
 Install the library via NuGet
 
@@ -12,8 +14,7 @@ Install the library via NuGet
 PM> Install-Package HumanBytes
 ```
 
-Basic usage
------------
+## Basic usage
 
 The `Bytes` extension method returns an object that has a human readable string representation:
 
@@ -24,8 +25,7 @@ Console.WriteLine("The size of '{0}' is {1}", f, f.Length.Bytes());
 
 The value is formatted using the default formatter; you can change the default formatter settings through the `ByteSizeFormatter.Default` static property.
 
-More advanced usage
--------------------
+## More advanced usage
 
 If you need more control, create an instance of `ByteSizeFormatter` and change its settings:
 
@@ -45,8 +45,7 @@ var f = new FileInfo("TheFile.jpg");
 Console.WriteLine("The size of '{0}' is {1}", f, formatter.Format(f.Length));
 ```
 
-Localization
-------------
+## Localization
 
 At this stage, HumanBytes only supports English and French. However, if you need support for another language, it's very easy, as there are only 3 terms that need to be translated. Just create an instance of `ByteSizeFormatter` as shown above, and set the following properties:
 
