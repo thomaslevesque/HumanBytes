@@ -11,8 +11,9 @@
   <PropertyGroup>
     <Description>A library to convert byte sizes to a human readable form.</Description>
     <Authors>Thomas Levesque</Authors>
-    <PackageLicenseUrl>https://github.com/thomaslevesque/HumanBytes/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/thomaslevesque/HumanBytes</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/thomaslevesque/HumanBytes/releases</PackageReleaseNotes>
     <PackageTags>byte,size,human</PackageTags>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
