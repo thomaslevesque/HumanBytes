@@ -40,10 +40,6 @@ namespace build
             string buildLogFile = Path.Combine(logsDir, "build.binlog");
             string packagesDir = Path.Combine(artifactsDir, "packages");
 
-            string solutionFile = "HumanBytes.sln";
-            string libraryProject = "src/HumanBytes/HumanBytes.csproj";
-            //string testProject = "tests/HumanBytes.Tests/HumanBytes.Tests.csproj";
-
             Target(
                 "artifactDirectories",
                 () =>
@@ -58,24 +54,23 @@ namespace build
                 DependsOn("artifactDirectories"),
                 () => Run(
                     "dotnet",
-                    $"build -c \"{Configuration}\" /bl:\"{buildLogFile}\" \"{solutionFile}\""));
+                    $"build -c \"{Configuration}\" /bl:\"{buildLogFile}\""));
 
-            // Target(
-            //     "test",
-            //     DependsOn("build"),
-            //     () => Run(
-            //         "dotnet",
-            //         $"test -c \"{Configuration}\" --no-build \"{testProject}\""));
+            Target(
+                "test",
+                DependsOn("build"),
+                () => Run(
+                    "dotnet",
+                    $"test -c \"{Configuration}\" --no-build"));
 
             Target(
                 "pack",
                 DependsOn("artifactDirectories", "build"),
                 () => Run(
                     "dotnet",
-                    $"pack -c \"{Configuration}\" --no-build -o \"{packagesDir}\" \"{libraryProject}\""));
+                    $"pack -c \"{Configuration}\" --no-build -o \"{packagesDir}\""));
 
-            //Target("default", DependsOn("test", "pack"));
-            Target("default", DependsOn("pack"));
+            Target("default", DependsOn("test", "pack"));
 
             RunTargets(RemainingArguments);
         }
