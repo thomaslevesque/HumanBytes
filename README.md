@@ -51,7 +51,7 @@ At this stage, HumanBytes only supports English and French. However, if you need
 
 - `ByteSymbol`: the symbol for byte, e.g. "B" in English.
 - `ByteWord`: the word for byte, e.g. "byte" in English.
-- `ByteWords`: the word for several bytes, e.g. "bytes" in English.
+- `BytesWord`: the word for several bytes, e.g. "bytes" in English.
 
 The values set on these properties will be used instead of the ones defined in resources.
 
