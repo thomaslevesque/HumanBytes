@@ -20,7 +20,8 @@ The `Bytes` extension method returns an object that has a human readable string 
 
 ```csharp
 var f = new FileInfo("TheFile.jpg");
-Console.WriteLine("The size of '{0}' is {1}", f, f.Length.Bytes());
+Console.WriteLine($"The size of '{f.Name}' is {f.Length.Bytes()}");
+// Prints "The size of 'TheFile.jpg' is 89 KB"
 ```
 
 The value is formatted using the default formatter; you can change the default formatter settings through the `ByteSizeFormatter.Default` static property.
@@ -42,7 +43,8 @@ var formatter = new ByteSizeFormatter
 };
 
 var f = new FileInfo("TheFile.jpg");
-Console.WriteLine("The size of '{0}' is {1}", f, formatter.Format(f.Length));
+Console.WriteLine($"The size of '{f.Name}' is {formatter.Format(f.Length)}");
+// Prints "The size of 'TheFile.jpg' is 88.7 KiB"
 ```
 
 ## Localization
